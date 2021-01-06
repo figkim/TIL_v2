@@ -1,0 +1,48 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <style>
+  body{
+    margin:1em auto;
+    max-width:40em;
+    padding:0 .62em;
+    font:1.2em/1.62 "helvetica neue";
+  }
+  h1,h2,h3 {
+    line-height:1.2;
+  }
+  img {
+    max-width: 100%;
+  }
+  a { 
+    text-decoration: none;    
+    color: #c3423f;
+
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      color: #eee;
+      background: #121212;
+    }
+  
+    a {
+      color: #50a8d8;
+    }
+  }
+  
+  @media print{
+    body{
+      max-width:none
+    }
+  }
+  </style>
+  <!--<link rel="icon" type="image/svg+xml" href="{{ site.url }}/favicon.svg">-->
+  <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/271/construction_1f6a7.png">
+
+  {%- feed_meta -%}
+  {%- if jekyll.environment == 'production' and site.google_analytics -%}
+    {%- include google-analytics.html -%}
+  {%- endif -%}
+</head>
