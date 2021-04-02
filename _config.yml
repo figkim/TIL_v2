@@ -28,9 +28,15 @@ google_analytics: true
 # Build settings
 # theme: minima
 markdown: kramdown
+highlighter: rouge
 plugins:
   - jekyll-feed
   - jekyll-paginate
+
+# Markdown Processing
+kramdown:
+  input: GFM
+  math_engine: mathjax
 
 paginate: 10
 permalink:   /:categories/:title
