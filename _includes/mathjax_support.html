@@ -11,6 +11,18 @@ MathJax.Hub.Config({
     processEscapes: true,
   }
 });
+MathJax.Hub.Config({
+  "HTML-CSS": {fonts: ['STIX-web']},
+  SVG: {font: 'STIX-Web'},
+  TeX: {Augment: {
+    Definitions: {
+      delimiter: {
+        '\\llbracket': '27E6',
+        '\\rrbracket': '27E7
+      }
+    }
+  }}
+});
 MathJax.Hub.Register.MessageHook("Math Processing Error",function (message) {
 	  alert("Math Processing Error: "+message[1]);
 	});
