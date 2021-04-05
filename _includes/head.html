@@ -1,5 +1,3 @@
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,7 +18,6 @@
   a { 
     text-decoration: none;    
     color: #c3423f;
-
   }
 
   @media (prefers-color-scheme: dark) {
@@ -40,6 +37,11 @@
     }
   }
   </style>
+
+  {% if page.use_math %}
+    {% include mathjax_support.html %}
+  {% endif %}
+
   <!--<link rel="icon" type="image/svg+xml" href="{{ site.url }}/favicon.svg">-->
   <link rel="icon" href="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/271/construction_1f6a7.png">
 

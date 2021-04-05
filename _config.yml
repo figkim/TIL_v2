@@ -29,6 +29,9 @@ google_analytics: true
 # theme: minima
 markdown: kramdown
 highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 plugins:
   - jekyll-feed
   - jekyll-paginate
